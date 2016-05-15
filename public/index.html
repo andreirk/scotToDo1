@@ -21,8 +21,10 @@
 <body ng-controller="mainController">
 <div class="container">
 
+    <!-- HEADER AND TODO COUNT -->
     <div class="jumbotron text-center">
-
+        <h1>Мой список дел </h1>
+        <h3>Осталось сделать:  <span class="label label-info">{{ todos.length }}</span></h3>
     </div>
 
     <!-- TODO LIST -->
@@ -45,7 +47,7 @@
             <form>
                 <div class="form-group">
 
-                    <input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.text">
+                    <input type="text" class="form-control input-lg text-center" placeholder="Я хочу сотворить ..." ng-model="formData.text">
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
