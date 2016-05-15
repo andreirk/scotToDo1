@@ -17,8 +17,11 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
-var Todo = require('models/todo').Todo;
+var Todo = require('./models/todo').Todo;
 
+// routes ======================================================================
+
+require('./routes')(app);
 
 
 // listen (start app with node server.js) ======================================
