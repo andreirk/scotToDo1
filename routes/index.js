@@ -3,14 +3,14 @@ var Todo = require('../models/todo').Todo;
 
 
 module.exports = function (app) {
-    // api ---------------------------------------------------------------------
+// api ---------------------------------------------------------------------
 // get all todos
     app.get('/api/todos', function(req, res) {
 
-        // use mongoose to get all todos in the database
+        
         Todo.find(function(err, todos) {
 
-            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            
             if (err)
                 res.send(err)
 
@@ -21,7 +21,7 @@ module.exports = function (app) {
 // create todo and send back all todos after creation
     app.post('/api/todos', function(req, res) {
 
-        // create a todo, information comes from AJAX request from Angular
+        
         Todo.create({
             text : req.body.text,
             done : false
@@ -29,7 +29,7 @@ module.exports = function (app) {
             if (err)
                 res.send(err);
 
-            // get and return all the todos after you create another
+           
             Todo.find(function(err, todos) {
                 if (err)
                     res.send(err)
@@ -47,7 +47,7 @@ module.exports = function (app) {
             if (err)
                 res.send(err);
 
-            // get and return all the todos after you create another
+            // get and return all the todos after  another
             Todo.find(function(err, todos) {
                 if (err)
                     res.send(err)
@@ -57,7 +57,7 @@ module.exports = function (app) {
     });
 
     app.get('*', function(req, res) {
-        res.sendFile(__dirname + '../public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+        res.sendFile(__dirname + '../public/index.html'); 
     });
 
 }
