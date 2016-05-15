@@ -1,7 +1,7 @@
 {
   "port": 3000,
   "mongoose":{
-    "uri": "mongodb://localhost/scot_todo",
+    "uri": "mongodb://<dbuser>:<dbpassword>@ds023442.mlab.com:23442/heroku_rltxz5xx",
     "options":{
       "server":{
         "socketOptions": {
