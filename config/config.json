@@ -1,7 +1,7 @@
 {
   "port": 3000,
   "mongoose":{
-    "uri": "mongodb://<dbuser>:<dbpassword>@eu-1.evennode.com/d058fdb89745e5e4ae655c7b26fc9916?replicaSet=rs0:d058fdb89745e5e4ae655c7b26fc9916/12345",
+    "uri": "mongodb://<dbuser>:<dbpassword>@eu-1.evennode.com/:d058fdb89745e5e4ae655c7b26fc9916/12345",
     "options":{
       "server":{
         "socketOptions": {
