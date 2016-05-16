@@ -24,12 +24,13 @@ var Todo = require('./models/todo').Todo;
 //require('./routes')(app);
 app.get('/api/todos', function(req, res) {
 
-
+    console.log('get api here');
     Todo.find(function(err, todos) {
 
 
         if (err)
-            res.send(err)
+            console.log('error hapend');
+            res.send(err);
 
         res.json(todos); // return all todos in JSON format
     });
@@ -38,7 +39,7 @@ app.get('/api/todos', function(req, res) {
 // create todo and send back all todos after creation
 app.post('/api/todos', function(req, res) {
 
-
+    console.log('post api here');
     Todo.create({
         text : req.body.text,
         done : false
